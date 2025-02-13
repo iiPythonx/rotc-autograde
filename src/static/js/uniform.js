@@ -120,7 +120,7 @@ new (class {
             this.create_form(standard);
             this.form.querySelector("input#name").value = name;
             for (const id in values) this.form.querySelector(`#${id}`).checked = values[id];
-            return;
+            return this.update_grade();
         }
         this.create_form(DEFAULT_STANDARD);
     }
@@ -181,8 +181,7 @@ new (class {
     }
 
     generate_pdf() {
-        const { jsPDF } = window.jspdf;
-        const doc = new jsPDF();
+        const doc = new window.jspdf.jsPDF();
         doc.autoTable({
             head: [["Last name", "First name", "Grade"]],
             body: this.people.map((e) => {
