@@ -1,0 +1,42 @@
+<!--
+    Copyright (c) 2025 Benjamin O'Brien. All rights reserved.
+    Licensed to Grenada NJROTC under a custom software license agreement.
+-->
+
+<!doctype html>
+<html lang = "en">
+    <head>
+        <meta charset = "utf-8">
+        <meta name = "description" content = "Automatic grading system for NJROTC Uniform inspections.">
+        <meta name = "author" content = "Benjamin O'Brien">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+
+        <!-- Links -->
+        <link rel = "stylesheet" type = "text/css" href = "/css/main.css">
+        <link rel = "stylesheet" type = "text/css" href = "/css/notyf.css">
+        <link rel = "icon" type = "image/x-icon" href = "/favicon.ico">
+
+        <title>NJROTC Uniform Inspection</title>
+    </head>
+    <body>
+        <header>
+            <img src = "/logo.avif">
+            <h2>NJROTC Autograde</h2>
+        </header>
+        <main>
+            <div id = "loading">
+                <div class = "lds-dual-ring"></div>
+                Loading assets ...
+            </div>
+        </main>
+        <footer>
+            Problems? Contact <a href = "mailto:ben@iipython.dev">ben@iipython.dev</a>.
+        </footer>
+
+        <!-- JS -->
+        <script src = "/js/jspdf.umd.min.js"></script>
+        <script src = "/js/jspdf.plugin.autotable.js"></script>
+        <script src = "/js/notyf.js"></script>
+        <script src = "/js/uniform.js" type = "module"></script>
+    </body>
+</html>

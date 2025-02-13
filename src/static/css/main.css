@@ -37,20 +37,70 @@ header {
     top: 10px;
     left: 10px;
     position: absolute;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+footer {
+    right: 10px;
+    bottom: 10px;
+    position: absolute;
 }
 
 /* Information container */
-main {
-    width: 500px;
-    /* height: 600px; */
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px;
+section {
     border-radius: 5px;
     border: 2px solid gray;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 598px;
 }
-main > div:not(.button-list) {
+section:first-child > div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+    overflow-y: scroll;
+}
+section:first-child {
+    width: 310px;
+}
+section:last-child {
+    width: 500px;
+}
+div.person {
+    cursor: pointer;
+    display: flex;
+    gap: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid gray;
+    transition: background-color .5s ease;
+}
+div.person:hover {
+    background-color: #e6e6e6;
+}
+div.active {
+    background-color: #d8d8d8;
+}
+section:first-child > div button {
+    padding: 5px;
+    aspect-ratio: 1/1;
+}
+section:first-child h3 {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+main {
+    width: fit-content;
+    display: flex;
+    gap: 10px;
+}
+section:last-child > div {
     display: flex;
     justify-content: space-between;
 }
@@ -76,6 +126,11 @@ label {
     display: flex;
     align-items: center;
     gap: 5px;
+}
+
+/* List buttons */
+#delete {
+    background-color: #dc3545;
 }
 
 /* Input styling */
@@ -151,3 +206,34 @@ button:disabled {
     visibility: visible;
     opacity: 1;
 }
+
+/* Loading spinner */
+#loading {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.lds-dual-ring, .lds-dual-ring:after {
+    box-sizing: border-box;
+}
+.lds-dual-ring {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+}
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 2.2px solid currentColor;
+    border-color: currentColor transparent currentColor transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+

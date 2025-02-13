@@ -1,0 +1,9 @@
+[project]
+mapping = "src:dist"
+
+[plugins.minify]
+suffixes   = [".html", ".js", ".css"]
+
+[plugins.minify.methods]
+js  = "external"
+css = "external"
