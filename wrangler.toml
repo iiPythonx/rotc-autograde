@@ -5,15 +5,6 @@ pages_build_output_dir = "dist"
 # Latest compat date as of 02/13/25
 compatibility_date = "2024-11-11"
 
-# Custom domain
-routes = [
-    { pattern = "uniform.iipython.dev", custom_domain = true }
-]
-
 # Project requirements
 [env.production.vars]
 UNSTABLE_PRE_BUILD = "bun i csso-cli uglify-js && rm bun.lockb && pip install selectolax minify-html nova-framework"
-
-# Handle building
-[build]
-command = "nova build"
