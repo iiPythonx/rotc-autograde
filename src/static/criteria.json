@@ -260,6 +260,7 @@
             {"name": "rank_insignia", "type": "requirement"},
             {"name": "improper_placement_female", "type": "requirement"},
             {"name": "dirty_unservicable", "type": "requirement"},
+            {"name": "designation_stars", "type": "requirement"},
             {"name": "irish_pennants_2", "type": "requirement"},
 
             {"name": "Jacket/Shirt", "type": "section"},
