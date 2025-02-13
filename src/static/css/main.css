@@ -44,6 +44,7 @@ header {
 footer {
     right: 10px;
     bottom: 10px;
+    text-align: right;
     position: absolute;
 }
 
@@ -57,12 +58,13 @@ section {
     gap: 5px;
     height: 598px;
 }
-section:first-child > div:first-child {
+section:first-child > div:first-child, #content {
     display: flex;
     flex-direction: column;
     gap: 5px;
     flex: 1;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 section:first-child {
     width: 310px;
@@ -100,9 +102,12 @@ main {
     display: flex;
     gap: 10px;
 }
-section:last-child > div {
+section:last-child > div:not(#content), #content > div {
     display: flex;
     justify-content: space-between;
+}
+#content > div {
+    padding-right: 10px;
 }
 .section-separator {
     display: flex;

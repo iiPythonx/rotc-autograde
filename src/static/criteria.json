@@ -1,104 +1,295 @@
 {
     "criteria": {
-        "wearing_garrison": {
-            "name": "Wearing garrison cap",
-            "score": 8.3,
+        "missing_cover": {
+            "name": "Cover is missing",
+            "score": -2,
             "details": null
         },
-        "garrison_insignia": {
-            "name": "Rank insignia on right side of garrison cap",
-            "score": 8.3,
+        "dirty_cover": {
+            "name": "Cover is dirty",
+            "score": -2,
             "details": null
         },
-        "garrison_anchor": {
-            "name": "Anchor on left side of garrison cap",
-            "score": 8.3,
+        "bad_emblem_condition": {
+            "name": "Unsatisfactory emblem condition",
+            "score": -2,
             "details": null
         },
-        "nametag_above_pocket": {
-            "name": "Name tag above right pocket",
-            "score": 8.3,
-            "details": "The name tag must be centered 1/4 of an inch above the right pocket."
+        "improper_fit_cover": {
+            "name": "Improper fit/press",
+            "score": -2,
+            "details": null
+        },
+        "irish_pennants_1": {
+            "name": "Irish pennants",
+            "score": -1,
+            "details": null
         },
         "jrotc_insignia": {
-            "name": "JROTC insignia is worn correctly",
-            "score": 8.3,
+            "name": "JROTC insignia not worn correctly",
+            "score": -2,
             "details": "Must be 1 and 7/8 inches away from left collar point."
         },
         "rank_insignia": {
-            "name": "Rank insignia is worn correctly",
-            "score": 8.3,
+            "name": "Rank insignia not worn correctly",
+            "score": -2,
             "details": "Must be 1 and 7/8 inches away from right collar point."
         },
-        "ribbons_male": {
-            "name": "Ribbons centered 1/4 inch above left pocket",
-            "score": 8.3,
+        "improper_placement": {
+            "name": "Improper ribbon placement",
+            "score": -4,
+            "details": "Ribbons must be centered 1/4 inch above left pocket."
+        },
+        "improper_placement_female": {
+            "name": "Improper ribbon placement",
+            "score": -4,
+            "details": "6 1/4 inches down from the intersection of the front and shoulder seam."
+        },
+        "dirty_unservicable": {
+            "name": "Dirty/unservicable",
+            "score": -2,
             "details": null
         },
-        "ribbons_female": {
-            "name": "Ribbons centered and in the right position on left side",
-            "score": 8.3,
-            "details": "Ribbons must be 6 1/4 inches down from the intersection of the front and shoulder seam."
+        "irish_pennants_2": {
+            "name": "Irish pennants",
+            "score": -2,
+            "details": null
+        },
+        "missing_name_tag": {
+            "name": "Name tag missing or not placed correctly",
+            "score": -2,
+            "details": "The name tag must be centered 1/4 of an inch above the right pocket."
+        },
+        "jacket_shirt_dirty": {
+            "name": "Jacket or shirt is dirty",
+            "score": -4,
+            "details": null
+        },
+        "improper_press": {
+            "name": "Improper press",
+            "score": -4,
+            "details": null
+        },
+        "irish_pennants_3": {
+            "name": "Irish pennants",
+            "score": -2,
+            "details": null
+        },
+        "belt_missing": {
+            "name": "Belt is missing",
+            "score": -2,
+            "details": null
+        },
+        "improper_length": {
+            "name": "Improper length",
+            "score": -2,
+            "details": null
+        },
+        "belt_dirty": {
+            "name": "Belt is dirty",
+            "score": -2,
+            "details": null
+        },
+        "improper_gig_line": {
+            "name": "Improper gig line",
+            "score": -2,
+            "details": null
+        },
+        "buckle": {
+            "name": "Buckle (not shined, scratched, etc.)",
+            "score": -2,
+            "details": null
+        },
+        "irish_pennants_4": {
+            "name": "Irish pennants",
+            "score": -2,
+            "details": null
+        },
+        "improper_fit_trousers": {
+            "name": "Improper fit",
+            "score": -4,
+            "details": null
+        },
+        "trousers_dirty": {
+            "name": "Trousers are dirty",
+            "score": -4,
+            "details": null
+        },
+        "improper_press_trousers": {
+            "name": "Improper press",
+            "score": -4,
+            "details": null
+        },
+        "unbuttoned_pockets": {
+            "name": "Unbuttoned pockets",
+            "score": -4,
+            "details": null
+        },
+        "irish_pennants_5": {
+            "name": "Irish pennants",
+            "score": -2,
+            "details": null
+        },
+        "not_shined": {
+            "name": "Not shined (dirty/scuffed)",
+            "score": -4,
+            "details": null
+        },
+        "unservicable_shoes": {
+            "name": "Unservicable",
+            "score": -2,
+            "details": null
+        },
+        "improper_haircut": {
+            "name": "Improper haircut",
+            "score": -4,
+            "details": null
+        },
+        "improper_shave": {
+            "name": "Improper shave",
+            "score": -4,
+            "details": null
+        },
+        "nose_ear_hair_unkept": {
+            "name": "Nose/ear hair unkept",
+            "score": -2,
+            "details": null
+        },
+        "odor": {
+            "name": "Foul/unpleasant odor (breath, uniform, etc.)",
+            "score": -2,
+            "details": null
+        },
+        "fingernails": {
+            "name": "Fingernails (dirty, improper length/color, etc.)",
+            "score": -4,
+            "details": null
+        },
+        "first_question_wrong": {
+            "name": "1st question wrong",
+            "score": -5,
+            "details": null
+        },
+        "second_question_wrong": {
+            "name": "2nd question wrong",
+            "score": -5,
+            "details": null
+        },
+        "cover_anchor": {
+            "name": "Anchor on left side of cover",
+            "score": -2,
+            "details": null
         },
         "designation_stars": {
-            "name": "Designation stars centered 1/4 inch above ribbons",
-            "score": 8.3,
+            "name": "Stars centered 1/4 inch above ribbons",
+            "score": -2,
             "details": "Additional stars must have a 1/4 inch gap between them horizontally."
-        },
-        "white_shirt": {
-            "name": "Plain white crew neck or v-neck tee shirt",
-            "score": 8.3,
-            "details": null
-        },
-        "belt_male": {
-            "name": "Belt with brass buckle is worn correctly",
-            "score": 8.3,
-            "details": null
         },
         "black_socks": {
             "name": "Plain black socks are being worn",
-            "score": 8.3,
-            "details": null
-        },
-        "shoes": {
-            "name": "Shined black quarter shoes are being worn",
-            "score": 8.3,
+            "score": -1,
             "details": null
         }
     },
     "standards": {
         "Male Service Uniform": [
-            {"name": "Head", "type": "section"},
-            {"name": "wearing_garrison", "type": "requirement"},
-            {"name": "garrison_insignia", "type": "requirement"},
-            {"name": "garrison_anchor", "type": "requirement"},
-            {"name": "Chest", "type": "section"},
-            {"name": "nametag_above_pocket", "type": "requirement"},
+            {"name": "Cover", "type": "section"},
+            {"name": "missing_cover", "type": "requirement"},
+            {"name": "dirty_cover", "type": "requirement"},
+            {"name": "bad_emblem_condition", "type": "requirement"},
+            {"name": "improper_fit_cover", "type": "requirement"},
+            {"name": "cover_anchor", "type": "requirement"},
+            {"name": "irish_pennants_1", "type": "requirement"},
+
+            {"name": "Ribbons/Breast Insignias", "type": "section"},
             {"name": "jrotc_insignia", "type": "requirement"},
             {"name": "rank_insignia", "type": "requirement"},
-            {"name": "ribbons_male", "type": "requirement"},
+            {"name": "improper_placement", "type": "requirement"},
+            {"name": "dirty_unservicable", "type": "requirement"},
             {"name": "designation_stars", "type": "requirement"},
-            {"name": "white_shirt", "type": "requirement"},
-            {"name": "Belt and Feet", "type": "section"},
-            {"name": "belt_male", "type": "requirement"},
+            {"name": "irish_pennants_2", "type": "requirement"},
+
+            {"name": "Jacket/Shirt", "type": "section"},
+            {"name": "missing_name_tag", "type": "requirement"},
+            {"name": "jacket_shirt_dirty", "type": "requirement"},
+            {"name": "improper_press", "type": "requirement"},
+            {"name": "irish_pennants_3", "type": "requirement"},
+
+            {"name": "Belt/Brass", "type": "section"},
+            {"name": "belt_missing", "type": "requirement"},
+            {"name": "improper_length", "type": "requirement"},
+            {"name": "belt_dirty", "type": "requirement"},
+            {"name": "improper_gig_line", "type": "requirement"},
+            {"name": "buckle", "type": "requirement"},
+            {"name": "irish_pennants_4", "type": "requirement"},
+
+            {"name": "Trousers", "type": "section"},
+            {"name": "improper_fit_trousers", "type": "requirement"},
+            {"name": "trousers_dirty", "type": "requirement"},
+            {"name": "improper_press_trousers", "type": "requirement"},
+            {"name": "unbuttoned_pockets", "type": "requirement"},
+            {"name": "irish_pennants_5", "type": "requirement"},
+
+            {"name": "Shoes", "type": "section"},
             {"name": "black_socks", "type": "requirement"},
-            {"name": "shoes", "type": "requirement"}
+            {"name": "not_shined", "type": "requirement"},
+            {"name": "unservicable_shoes", "type": "requirement"},
+
+            {"name": "Hygiene", "type": "section"},
+            {"name": "improper_haircut", "type": "requirement"},
+            {"name": "improper_shave", "type": "requirement"},
+            {"name": "nose_ear_hair_unkept", "type": "requirement"},
+            {"name": "odor", "type": "requirement"},
+            {"name": "fingernails", "type": "requirement"},
+
+            {"name": "Knowledge", "type": "section"},
+            {"name": "first_question_wrong", "type": "requirement"},
+            {"name": "second_question_wrong", "type": "requirement"}
         ],
         "Female Service Uniform": [
-            {"name": "Head", "type": "section"},
-            {"name": "wearing_garrison", "type": "requirement"},
-            {"name": "garrison_insignia", "type": "requirement"},
-            {"name": "garrison_anchor", "type": "requirement"},
-            {"name": "Chest", "type": "section"},
-            {"name": "nametag_above_pocket", "type": "requirement"},
+            {"name": "Cover", "type": "section"},
+            {"name": "missing_cover", "type": "requirement"},
+            {"name": "dirty_cover", "type": "requirement"},
+            {"name": "bad_emblem_condition", "type": "requirement"},
+            {"name": "improper_fit_cover", "type": "requirement"},
+            {"name": "cover_anchor", "type": "requirement"},
+            {"name": "irish_pennants_1", "type": "requirement"},
+
+            {"name": "Ribbons/Breast Insignias", "type": "section"},
             {"name": "jrotc_insignia", "type": "requirement"},
             {"name": "rank_insignia", "type": "requirement"},
-            {"name": "ribbons_female", "type": "requirement"},
-            {"name": "designation_stars", "type": "requirement"},
-            {"name": "white_shirt", "type": "requirement"},
-            {"name": "Belt and Feet", "type": "section"},
+            {"name": "improper_placement_female", "type": "requirement"},
+            {"name": "dirty_unservicable", "type": "requirement"},
+            {"name": "irish_pennants_2", "type": "requirement"},
+
+            {"name": "Jacket/Shirt", "type": "section"},
+            {"name": "missing_name_tag", "type": "requirement"},
+            {"name": "jacket_shirt_dirty", "type": "requirement"},
+            {"name": "improper_press", "type": "requirement"},
+            {"name": "irish_pennants_3", "type": "requirement"},
+
+            {"name": "Trousers", "type": "section"},
+            {"name": "improper_fit_trousers", "type": "requirement"},
+            {"name": "trousers_dirty", "type": "requirement"},
+            {"name": "improper_press_trousers", "type": "requirement"},
+            {"name": "unbuttoned_pockets", "type": "requirement"},
+            {"name": "irish_pennants_5", "type": "requirement"},
+
+            {"name": "Shoes", "type": "section"},
             {"name": "black_socks", "type": "requirement"},
-            {"name": "shoes", "type": "requirement"}
+            {"name": "not_shined", "type": "requirement"},
+            {"name": "unservicable_shoes", "type": "requirement"},
+
+            {"name": "Hygiene", "type": "section"},
+            {"name": "improper_haircut", "type": "requirement"},
+            {"name": "improper_shave", "type": "requirement"},
+            {"name": "nose_ear_hair_unkept", "type": "requirement"},
+            {"name": "odor", "type": "requirement"},
+            {"name": "fingernails", "type": "requirement"},
+
+            {"name": "Knowledge", "type": "section"},
+            {"name": "first_question_wrong", "type": "requirement"},
+            {"name": "second_question_wrong", "type": "requirement"}
         ]
     }
 }

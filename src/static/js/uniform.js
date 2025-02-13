@@ -32,6 +32,10 @@ new (class {
         }
     }
 
+    update_grade() {
+        this.form.querySelector("#grade").innerText = `Grade: ${this.calculate_grade(this.get_values().values)}%`;
+    }
+
     create_form(standard) {
         this.form.innerHTML = `
             <div>
@@ -44,10 +48,13 @@ new (class {
                     ${Object.entries(this.standards).map(([type, _]) => `<option value = "${type}"${type === standard ? "selected" : ""}>${type}</option>`).join("")}
                 </select>
             </div>
-            <div class = "space"></div>
+            <div id = "content"></div>
             <hr>
             <div class = "button-list">
                 ${this.editing_index === null ? "<button id = 'reset'>Reset</button>" : ""}
+                <button id = "all">All</button>
+                <div class = "space"></div>
+                <span id = "grade">Grade: 100%</span>
                 <div class = "space"></div>
                 <button id = "add">${this.editing_index === null ? "Add Grade" : "Edit Grade"}</button>
             </div>
@@ -56,6 +63,7 @@ new (class {
         // Handle loading standard requirements
         for (const item of this.standards[standard]) {
             const object = this.criteria[item.name];
+            if (!object) console.warn(item.name, "criteria does not exist");
             const element = document.createElement("div");
             element.innerHTML = item.type === "section" ? `<span>${item.name}</span>` : `
                 <label for = "${item.name}">
@@ -69,7 +77,12 @@ new (class {
                 <input type = "checkbox" id = "${item.name}">
             `;
             element.classList = item.type === "section" ? "section-separator" : "";
-            this.form.insertBefore(element, this.form.querySelector(".space"))
+            this.form.querySelector("#content").appendChild(element);
+
+            // Handle updating grade when we change something
+            if (item.type === "requirement") {
+                element.querySelector("input").addEventListener("change", () => this.update_grade());
+            }
         }
 
         // Handle changing the uniform standard
@@ -94,6 +107,10 @@ new (class {
         });
         document.querySelector(`input[type = "text"]`).focus();
         document.getElementById("add").addEventListener("click", submit);
+        document.getElementById("all").addEventListener("click", () => {
+            for (const check of this.form.querySelectorAll(`input[type = "checkbox"]`)) check.checked = true;
+            this.update_grade();
+        });
         if (this.editing_index === null) document.getElementById("reset").addEventListener("click", () => this.create_form(DEFAULT_STANDARD));
     }
 
@@ -158,6 +175,11 @@ new (class {
         if (active_element) active_element.scrollIntoView({ behavior: "auto", block: "nearest" });
     }
 
+    calculate_grade(values) {
+        const points = Object.entries(values).filter(([_, value]) => value).map(([key]) => key).map((x) => this.criteria[x].score);
+        return 100 + points.reduce((a, c) => a + c, 0);
+    }
+
     generate_pdf() {
         const { jsPDF } = window.jspdf;
         const doc = new jsPDF();
@@ -165,10 +187,9 @@ new (class {
             head: [["Last name", "First name", "Grade"]],
             body: this.people.map((e) => {
                 const name = e.name.split(" ").reverse();
-                const points = Object.entries(e.values).filter(([_, value]) => value).map(([key]) => key).map((x) => this.criteria[x].score);
                 return [
                     ...(name.length === 1 ? ["", name] : name),
-                    `${Math.round(points.reduce((a, c) => a + c, 0) * 10) / 10}%`
+                    `${this.calculate_grade(e.values)}%`
                 ]
             }),
             margin: { top: 20 }
