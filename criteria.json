@@ -1,0 +1,104 @@
+{
+    "criteria": {
+        "wearing_garrison": {
+            "name": "Wearing garrison cap",
+            "score": 8.3,
+            "details": null
+        },
+        "garrison_insignia": {
+            "name": "Rank insignia on right side of garrison cap",
+            "score": 8.3,
+            "details": null
+        },
+        "garrison_anchor": {
+            "name": "Anchor on left side of garrison cap",
+            "score": 8.3,
+            "details": null
+        },
+        "nametag_above_pocket": {
+            "name": "Name tag above right pocket",
+            "score": 8.3,
+            "details": "The name tag must be centered 1/4 of an inch above the right pocket."
+        },
+        "jrotc_insignia": {
+            "name": "JROTC insignia is worn correctly",
+            "score": 8.3,
+            "details": "Must be 1 and 7/8 inches away from left collar point."
+        },
+        "rank_insignia": {
+            "name": "Rank insignia is worn correctly",
+            "score": 8.3,
+            "details": "Must be 1 and 7/8 inches away from right collar point."
+        },
+        "ribbons_male": {
+            "name": "Ribbons centered 1/4 inch above left pocket",
+            "score": 8.3,
+            "details": null
+        },
+        "ribbons_female": {
+            "name": "Ribbons centered and in the right position on left side",
+            "score": 8.3,
+            "details": "Ribbons must be 6 1/4 inches down from the intersection of the front and shoulder seam."
+        },
+        "designation_stars": {
+            "name": "Designation stars centered 1/4 inch above ribbons",
+            "score": 8.3,
+            "details": "Additional stars must have a 1/4 inch gap between them horizontally."
+        },
+        "white_shirt": {
+            "name": "Plain white crew neck or v-neck tee shirt",
+            "score": 8.3,
+            "details": null
+        },
+        "belt_male": {
+            "name": "Belt with brass buckle is worn correctly",
+            "score": 8.3,
+            "details": null
+        },
+        "black_socks": {
+            "name": "Plain black socks are being worn",
+            "score": 8.3,
+            "details": null
+        },
+        "shoes": {
+            "name": "Shined black quarter shoes are being worn",
+            "score": 8.3,
+            "details": null
+        }
+    },
+    "standards": {
+        "Male Service Uniform": [
+            {"name": "Head", "type": "section"},
+            {"name": "wearing_garrison", "type": "requirement"},
+            {"name": "garrison_insignia", "type": "requirement"},
+            {"name": "garrison_anchor", "type": "requirement"},
+            {"name": "Chest", "type": "section"},
+            {"name": "nametag_above_pocket", "type": "requirement"},
+            {"name": "jrotc_insignia", "type": "requirement"},
+            {"name": "rank_insignia", "type": "requirement"},
+            {"name": "ribbons_male", "type": "requirement"},
+            {"name": "designation_stars", "type": "requirement"},
+            {"name": "white_shirt", "type": "requirement"},
+            {"name": "Belt and Feet", "type": "section"},
+            {"name": "belt_male", "type": "requirement"},
+            {"name": "black_socks", "type": "requirement"},
+            {"name": "shoes", "type": "requirement"}
+        ],
+        "Female Service Uniform": [
+            {"name": "Head", "type": "section"},
+            {"name": "wearing_garrison", "type": "requirement"},
+            {"name": "garrison_insignia", "type": "requirement"},
+            {"name": "garrison_anchor", "type": "requirement"},
+            {"name": "Chest", "type": "section"},
+            {"name": "nametag_above_pocket", "type": "requirement"},
+            {"name": "jrotc_insignia", "type": "requirement"},
+            {"name": "rank_insignia", "type": "requirement"},
+            {"name": "ribbons_female", "type": "requirement"},
+            {"name": "designation_stars", "type": "requirement"},
+            {"name": "white_shirt", "type": "requirement"},
+            {"name": "Belt and Feet", "type": "section"},
+            {"name": "black_socks", "type": "requirement"},
+            {"name": "shoes", "type": "requirement"}
+        ]
+    }
+}

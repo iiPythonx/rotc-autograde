@@ -1,0 +1,153 @@
+/*
+    Copyright (c) 2025 Benjamin O'Brien. All rights reserved.
+    Licensed to Grenada NJROTC under a custom software license agreement.
+*/
+
+/* Font faces */
+@font-face {
+    font-family: "Poppins";
+    src: url("/fonts/poppins.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Poppins";
+    src: url("/fonts/poppins-bold.woff2") format("woff2");
+    font-weight: bold;
+}
+
+/* Global margin reset and font application */
+* {
+    margin: 0px;
+    font-family: "Poppins";
+}
+
+/* Handle page styling */
+body, html {
+    height: 100%;
+}
+body {
+    color: #000;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Setup top left logo */
+header {
+    top: 10px;
+    left: 10px;
+    position: absolute;
+}
+
+/* Information container */
+main {
+    width: 500px;
+    /* height: 600px; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid gray;
+}
+main > div:not(.button-list) {
+    display: flex;
+    justify-content: space-between;
+}
+.section-separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin: 10px 0;
+}
+.section-separator::before,
+.section-separator::after {
+    content: "";
+    flex: 1;
+    border-bottom: 2px solid gray;
+    margin: 0 10px;
+}
+.section-separator span {
+    font-weight: bold;
+    white-space: nowrap;
+}
+label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Input styling */
+input[type = "text"] {
+    border: 1px solid gray;
+    border-radius: 3px;
+    outline: none;
+}
+input[type = "text"].invalid {
+    border: 2px solid #dc3545;
+}
+
+/* Button styling */
+button {
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    background-color: #198754;
+    transition: opacity .3s ease;
+}
+button:not(:disabled):hover {
+    opacity: .8;
+}
+button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+/* Assistant classes */
+.button-list {
+    display: flex;
+    gap: 5px;
+}
+.space {
+    flex: 1;
+}
+
+/* Information icons */
+.info-icon {
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    position: relative;
+}
+.tooltip {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    left: 0px;
+    width: fit-content;
+    top: -30px;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 12px;
+    white-space: nowrap;
+}
+.info-icon:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
